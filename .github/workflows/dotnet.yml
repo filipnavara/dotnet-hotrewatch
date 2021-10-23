@@ -24,4 +24,8 @@ jobs:
         dotnet-version: 3.1.x
         include-prerelease: true
     - name: Build
-      run: dotnet pack dotnet-hotrewatch
+      run: dotnet pack --configuration Release dotnet-hotrewatch
+    - name: Publish the package to nuget.org
+      run: dotnet nuget push dotnet-hotrewatch/bin/Release/*.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
