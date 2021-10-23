@@ -26,6 +26,7 @@ jobs:
     - name: Build
       run: dotnet pack --configuration Release dotnet-hotrewatch
     - name: Publish the package to nuget.org
+      if: endsWith(github.ref, '/main')
       run: dotnet nuget push dotnet-hotrewatch/bin/Release/*.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
