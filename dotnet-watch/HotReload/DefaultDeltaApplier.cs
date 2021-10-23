@@ -61,7 +61,7 @@ namespace Microsoft.DotNet.Watcher.Tools
 
             if (context.Iteration == 0)
             {
-                var deltaApplier = Path.Combine(AppContext.BaseDirectory, "hotreload", "Microsoft.Extensions.DotNetDeltaApplier.dll");
+                var deltaApplier = Path.Combine(AppContext.BaseDirectory, "Microsoft.Extensions.DotNetDeltaApplier.dll");
                 context.ProcessSpec.EnvironmentVariables.DotNetStartupHooks.Add(deltaApplier);
 
                 // Configure the app for EnC

@@ -56,7 +56,7 @@ namespace Microsoft.DotNet.Watcher.Tools
                 context.ProcessSpec.EnvironmentVariables["ASPNETCORE_AUTO_RELOAD_WS_ENDPOINT"] = serverUrls;
                 context.ProcessSpec.EnvironmentVariables["ASPNETCORE_AUTO_RELOAD_WS_KEY"] = _refreshServer.ServerKey;
 
-                var pathToMiddleware = Path.Combine(AppContext.BaseDirectory, "middleware", "Microsoft.AspNetCore.Watch.BrowserRefresh.dll");
+                var pathToMiddleware = Path.Combine(AppContext.BaseDirectory, "Microsoft.AspNetCore.Watch.BrowserRefresh.dll");
                 context.ProcessSpec.EnvironmentVariables.DotNetStartupHooks.Add(pathToMiddleware);
                 context.ProcessSpec.EnvironmentVariables.AspNetCoreHostingStartupAssemblies.Add("Microsoft.AspNetCore.Watch.BrowserRefresh");
             }

@@ -1,0 +1,17 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />  
+
+  <PropertyGroup>
+    <MicrosoftBuildPackageVersion>17.1.0-preview-21519-01</MicrosoftBuildPackageVersion>
+    <MicrosoftBuildFrameworkVersion>$(MicrosoftBuildPackageVersion)</MicrosoftBuildFrameworkVersion>
+    <MicrosoftBuildLocatorPackageVersion>1.4.1</MicrosoftBuildLocatorPackageVersion>
+    <MicrosoftBuildUtilitiesCoreVersion>$(MicrosoftBuildPackageVersion)</MicrosoftBuildUtilitiesCoreVersion>
+    <MicrosoftCodeAnalysisCSharpFeaturesPackageVersion>4.0.0-6.21521.2</MicrosoftCodeAnalysisCSharpFeaturesPackageVersion>
+    <MicrosoftCodeAnalysisWorkspacesMSBuildPackageVersion>4.0.0-6.21521.2</MicrosoftCodeAnalysisWorkspacesMSBuildPackageVersion>
+    <SystemCommandLineVersion>2.0.0-beta1.21473.1</SystemCommandLineVersion>
+
+    <SdkTargetFramework>net6.0</SdkTargetFramework>
+
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>

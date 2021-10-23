@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>exe</OutputType>
+    <Description>Command line tool to watch for source file changes during development and restart the dotnet command.</Description>
+    <StrongNameKeyId>MicrosoftAspNetCore</StrongNameKeyId>
+    <UseAppHost>false</UseAppHost>
+    <RuntimeIdentifier />
+    <PackAsTool>true</PackAsTool>
+    <PackAsToolShimRuntimeIdentifiers>win-x64;win-x86;osx-x64</PackAsToolShimRuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="**\*.resx" GenerateSource="true" />
+    <Content Include="..\dotnet-watch\DotNetWatch.targets" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-watch\dotnet-watch.csproj" />
+    <ProjectReference Include="..\BrowserRefresh\Microsoft.AspNetCore.Watch.BrowserRefresh.csproj" SkipGetTargetFrameworkProperties="true" UndefineProperties="TargetFramework;TargetFrameworks" />
+    <ProjectReference Include="..\DotNetWatchTasks\DotNetWatchTasks.csproj" SkipGetTargetFrameworkProperties="true" UndefineProperties="TargetFramework;TargetFrameworks" />
+    <ProjectReference Include="..\DotNetDeltaApplier\Microsoft.Extensions.DotNetDeltaApplier.csproj" SkipGetTargetFrameworkProperties="true" UndefineProperties="TargetFramework;TargetFrameworks" />
+  </ItemGroup>
+
+</Project>

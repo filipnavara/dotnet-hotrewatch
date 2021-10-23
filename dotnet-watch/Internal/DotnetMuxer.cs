@@ -10,8 +10,7 @@ namespace Microsoft.DotNet.Watcher.Tools
     {
         static DotnetMuxer()
         {
-            MuxerPath = Process.GetCurrentProcess().MainModule.FileName;
-            Debug.Assert(Path.GetFileNameWithoutExtension(MuxerPath) == "dotnet", $"Invalid muxer path {MuxerPath}");
+            MuxerPath = "dotnet";
         }
 
         public static string MuxerPath { get; }
