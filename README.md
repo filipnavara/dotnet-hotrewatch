@@ -2,7 +2,7 @@
 
 ## Installation
 
-Run `dotnet tool install -g dotnet-hotrewatch`.
+Run `dotnet tool install -g dotnet-hotrewatch --version "*-*"`.
 
 If you are on Apple Silicon you may receive an error `zsh: killed     dotnet-hotrewatch`. To workaround that run `codesign -s "-" ~/.dotnet/tools/dotnet-hotrewatch` after the installation. This is a bug in the .NET SDK that will hopefully get fixed soon.
 
