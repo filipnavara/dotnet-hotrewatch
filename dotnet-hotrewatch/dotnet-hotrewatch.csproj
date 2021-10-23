@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.244" PrivateAssets="all" />
     <ProjectReference Include="..\dotnet-watch\dotnet-watch.csproj" />
     <ProjectReference Include="..\BrowserRefresh\Microsoft.AspNetCore.Watch.BrowserRefresh.csproj" SkipGetTargetFrameworkProperties="true" UndefineProperties="TargetFramework;TargetFrameworks" />
     <ProjectReference Include="..\DotNetWatchTasks\DotNetWatchTasks.csproj" SkipGetTargetFrameworkProperties="true" UndefineProperties="TargetFramework;TargetFrameworks" />
